@@ -1,25 +1,15 @@
-import React from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import App from '../App';
+import { createMuiTheme } from '@material-ui/core';
 import { overpass } from './Font'
 
-export default function Theme() {
-    const theme = createMuiTheme({
-        typography: {
-            fontFamily: 'Overpass, Arial',
-        },
-        overrides: {
-            MuiCssBaseline: {
-                '@global': {
-                    '@font-face': [overpass],
-                },
+export const Theme = createMuiTheme({
+    typography: {
+        fontFamily: 'Overpass, Arial',
+    },
+    overrides: {
+        MuiCssBaseline: {
+            '@global': {
+                '@font-face': [overpass],
             },
         },
-    });
-
-    return (
-        <ThemeProvider theme={theme}>
-            {App}
-        </ThemeProvider>
-    );
-}
+    },
+});
