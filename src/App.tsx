@@ -22,29 +22,30 @@ const useStyles = makeStyles((theme) => ({
 
 export default function App() {
     const classes = useStyles();
+    const emptyDiv = <div></div>;
     return (
         <>
             <CssBaseline />
             <Router>
                 <AppBar position="static">
-                    <Suspense fallback={<div></div>}>
+                    <Suspense fallback={emptyDiv}>
                         <MyToolbar />
                     </Suspense>
                 </AppBar>
                 <Container component="main" maxWidth="xl" className={classes.container}>
                     <Switch>
                         <Route path="/test">
-                            <Suspense fallback={<div></div>}>
+                            <Suspense fallback={emptyDiv}>
                                 <Trainer />
                             </Suspense>
                         </Route>
                         <Route path="/words">
-                            <Suspense fallback={<h1></h1>}>
+                            <Suspense fallback={emptyDiv}>
                                 <Words />
                             </Suspense>
                         </Route>
                         <Route path="/">
-                            <Suspense fallback={<h1></h1>}>
+                            <Suspense fallback={emptyDiv}>
                                 <Home />
                             </Suspense>
                         </Route>

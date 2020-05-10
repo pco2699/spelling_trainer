@@ -28,7 +28,7 @@ export default function Home() {
     return (
         <div className={classes.main}>
             <Typography variant='h3'>the deadly simple spelling trainer</Typography>
-            <img onClick={login} src={signin_btn} srcSet={`${signin_btn2x} 2x`} style={{marginTop: "20px"}} />
+            <img alt="google-signin" onClick={login} src={signin_btn} srcSet={`${signin_btn2x} 2x`} style={{marginTop: "20px"}} />
         </div>
     )
 }
